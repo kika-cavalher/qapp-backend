@@ -8,7 +8,7 @@ app.use(cors())
 
 routes(app)
 
-app.listen(process.env.PORT || 3000, () => 
+app.listen(process.env.PORT || 8080, () => 
     console.log('Está dando TUDO CERTO, está TUDO BEM!')
 )
 
