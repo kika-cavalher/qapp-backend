@@ -3,13 +3,12 @@ const cors = require('cors')
 const routes = require('./routes/index')
 
 const app = express()
-const port = 3000
 
 app.use(cors())
 
 routes(app)
 
-app.listen(port, () => 
+app.listen(process.env.PORT || 3000, () => 
     console.log('Está dando TUDO CERTO, está TUDO BEM!')
 )
 
