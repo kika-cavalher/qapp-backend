@@ -1,13 +1,15 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Development of a defect and testing management system",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [ "heroku"],
+  "keywords": [
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -21,5 +23,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kika-cavalher/qapp-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kika-cavalher/qapp-backend/issues"
+  },
+  "homepage": "https://github.com/kika-cavalher/qapp-backend#readme"
 }
