@@ -1,36 +1,26 @@
 {
-  "name": "api",
+  "name": "qapp-back",
   "version": "1.0.0",
-  "description": "Development of a defect and testing management system",
-  "main": "src/index.js",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "heroku"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "mysql2": "^2.3.3",
-    "path": "^0.12.7",
-    "sequelize": "^6.17.0",
-    "sequelize-cli": "^6.4.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kika-cavalher/qapp-backend.git"
+    "url": "git+https://github.com/kika-cavalher/qapp-back.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kika-cavalher/qapp-backend/issues"
+    "url": "https://github.com/kika-cavalher/qapp-back/issues"
   },
-  "homepage": "https://github.com/kika-cavalher/qapp-backend#readme"
+  "homepage": "https://github.com/kika-cavalher/qapp-back#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15"
+  }
 }

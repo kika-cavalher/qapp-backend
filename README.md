@@ -1,2 +1,2 @@
-# qapp
-Development of a defect and testing management system
+# 2404-api-node-express
+Projeto utilizado no curso da Alura

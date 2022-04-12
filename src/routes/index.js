@@ -1,8 +1,17 @@
-const bodyParser = require('body-parser')
-const projects = require('./projectsRoute')
+import express from "express";
+import livros from "./livrosRoutes.js"
+import autores from "./autoresRoutes.js"
 
-module.exports = app => {
-    app.use(bodyParser.json())
-    app.use(projects)
+const routes = (app) => {
+  app.route('/').get((req, res) => {
+    res.status(200).send({Status: "Está funcionando essa car@lh@"})
+  })
+
+  app.use(
+    express.json(),
+    livros,
+    autores
+  )
 }
 
+export default routes
