@@ -15,3 +15,6 @@ const projectSchema = new mongoose.Schema(
 const project = mongoose.model("project", projectSchema)
 
 export default project;
+
+//Adicionar datacriação e edição
+//Adicionar FK com o user ?????
