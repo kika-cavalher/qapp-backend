@@ -1,7 +1,14 @@
 import mongoose from "mongoose"
+import dotenv from 'dotenv'
+dotenv.config()
 
-mongoose.connect("mongodb+srv://qapp:123@qapp.8mins.mongodb.net/qapp-db");
+const uri = process.env.MONGODB_URI
 
-let db = mongoose.connection;
+mongoose.connect(uri,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+const db = mongoose.connection;
 
 export default db;
