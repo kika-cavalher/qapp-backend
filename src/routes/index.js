@@ -3,7 +3,7 @@ import projects from "./projectsRoutes.js"
 
 const routes = (app) => {
   app.route('/').get((req, res) => {
-    res.status(200).send({Status: "Está funcionando essa car@lh@"})
+    res.status(200).send("Está funcionando essa car@lh@")
   })
 
   app.use(
