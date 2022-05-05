@@ -1,5 +1,6 @@
 import express from "express";
 import projects from "./projectsRoutes.js"
+import cors from 'cors'
 
 const routes = (app) => {
   app.route('/').get((req, res) => {
@@ -7,6 +8,7 @@ const routes = (app) => {
   })
 
   app.use(
+    cors(),
     express.json(),
     projects
   )
