@@ -1,27 +1,27 @@
-import project from "../models/projects.js";
+import projects from "../models/projects.js";
 
 class ProjectsController {
 
   static listAllProjects = (req, res) => {
-    project.find((err, project) => {
-      res.status(200).json(project)
+    projects.find((err, projects) => {
+      res.status(200).json(projects)
   })
   }
 
   static listProjectById = (req, res) => {
     const id = req.params.id;
 
-    project.findById(id, (err, project) => {
+    projects.findById(id, (err, projects) => {
       if(err) {
         res.status(400).send({message: `${err.message} - Id do Projeto não localizado.`})
       } else {
-        res.status(200).send(project);
+        res.status(200).send(projects);
       }
     })
   }
 
   static createdProject = (req, res) => {
-    let project = new project(req.body);
+    let project = new projects(req.body);
 
     project.save((err) => {
 
@@ -36,7 +36,7 @@ class ProjectsController {
   static updateProject = (req, res) => {
     const id = req.params.id;
 
-    project.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+    projects.findByIdAndUpdate(id, {$set: req.body}, (err) => {
       if(!err) {
         res.status(200).send({message: 'Projeto atualizado com sucesso'})
       } else {
@@ -48,7 +48,7 @@ class ProjectsController {
   static deleteProject = (req, res) => {
     const id = req.params.id;
 
-    project.findByIdAndDelete(id, (err) => {
+    projects.findByIdAndDelete(id, (err) => {
       if(!err){
         res.status(200).send({message: 'Projeto removido com sucesso'})
       } else {
@@ -56,7 +56,6 @@ class ProjectsController {
       }
     })
   }
-
 }
 
 export default ProjectsController

@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const projectSchema = new mongoose.Schema(
+const projectsSchema = new Schema(
   {
-    id: {type: String},
+    id: {type: [String], index: true},
     title: {type: String, required: true},
     abbreviation: {type: String, required: true},
     describe: {type: String},
@@ -12,9 +12,9 @@ const projectSchema = new mongoose.Schema(
   }
 )
 
-const project = mongoose.model("project", projectSchema)
+const projects = mongoose.model("projects", projectsSchema)
 
-export default project;
+export default projects;
 
 //Adicionar datacriação e edição
 //Adicionar FK com o user ?????
