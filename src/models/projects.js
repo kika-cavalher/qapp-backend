@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const projectsSchema = new mongoose.Schema(
   {
-    id: {type: [String], index: true},
+    id: {type: String, index: true},
     title: {type: String, required: true},
     abbreviation: {type: String, required: true},
     describe: {type: String},
