@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const projectsSchema = new Schema(
+const projectsSchema = new moongose.Schema(
   {
     id: {type: [String], index: true},
     title: {type: String, required: true},
